@@ -1,0 +1,32 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "vim_mode == normal", // work for editor and assistant panel
+    "bindings": {
+      "space": "command_palette::Toggle", // leader key
+      "space p f": "file_finder::Toggle", // find project files
+      "space p s": "workspace::NewSearch", // search the current project
+      "space t t": "terminal_panel::ToggleFocus", // open terminal
+      "space r e": "editor::Rename"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "use_key_equivalents": true,
+    "bindings": {
+      "backspace": null
+    }
+  }
+]
