@@ -7,13 +7,21 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_assistant": false
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "gemini-2.5-pro"
     },
     "version": "2"
   },
@@ -49,5 +57,8 @@
       "show_copilot_suggestions": false
     }
   },
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font"
+  }
 }
