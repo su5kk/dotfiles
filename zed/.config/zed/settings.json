@@ -19,15 +19,16 @@
     "edit_prediction_provider": "zed"
   },
   "assistant": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-2.5-pro"
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
   "theme": "Rosé Pine",
   "vim_mode": true,
-  "ui_font_size": 18,
+  "ui_font_size": 22,
   "buffer_font_size": 22,
   "experimental.theme_overrides": {
     "background.appearance": "transparent",
