@@ -13,21 +13,19 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_text_threads": false
+    "enabled_in_assistant": false
   },
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "agent": {
-    "default_profile": "write",
+  "assistant": {
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
-  "agent_font_size": 22,
   "theme": "Rosé Pine",
   "vim_mode": true,
   "ui_font_size": 22,
@@ -55,6 +53,9 @@
     },
     "C++": {
       "show_edit_predictions": true
+    },
+    "Python": {
+      "show_copilot_suggestions": false
     }
   },
   "relative_line_numbers": true,
