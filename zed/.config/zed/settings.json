@@ -28,26 +28,26 @@
     "version": "2"
   },
   "agent_font_size": 22,
-  "theme": "Rosé Pine",
   "vim_mode": true,
   "ui_font_size": 22,
   "buffer_font_size": 22,
   "experimental.theme_overrides": {
     "background.appearance": "transparent",
-    "background": "#19172499",
+    "background": "#0c041699",
+    "border.variant": "#00000000",
     "editor.background": "#19172430",
     "editor.gutter.background": "#1f1d2e30",
-    "tab_bar.background": "#00000030",
-    "terminal.background": "#26233a30",
-    "toolbar.background": "#19172430",
-    "tab.active_background": "#28282820",
+    "editor.active_line.background": "#00000000",
+    "terminal.background": "#19172410",
+    "toolbar.background": "#19172410",
+    "tab_bar.background": "#1f1d2e30",
+    "tab.active_background": "#28282810",
     "tab.inactive_background": "#00000000",
-    "status_bar.background": "#00000030",
-    "title_bar.background": "#00000030",
-    "panel.background": "#00000030",
-    "border.variant": "#00000000",
+    "status_bar.background": "#19172490",
     "scrollbar.track.border": "#00000000",
-    "editor.active_line.background": "#00000000"
+    "title_bar.background": "#19172490",
+    "panel.background": "#19172410",
+    "panel.focused_border": "#1f1d2e"
   },
   "languages": {
     "Go": {
