@@ -10,9 +10,18 @@
     "context": "vim_mode == normal", // work for editor and assistant panel
     "bindings": {
       "space": "command_palette::Toggle", // leader key
-      "space p f": "file_finder::Toggle", // find project files
-      "space p s": "workspace::NewSearch", // search the current project
-      "space t t": "terminal_panel::ToggleFocus", // open terminal
+      "space f f": "file_finder::Toggle", // find project files
+      "space g": "workspace::NewSearch", // search the current project
+      "space a": "workspace::ToggleRightDock", // search the current project
+
+      // terminal
+      "ctrl-\\": "terminal_panel::ToggleFocus", // open terminal
+
+      // git
+      "space g g": "git_panel::ToggleFocus",
+      "space g b": "git::Blame",
+      "space g d": "git::Diff",
+
       "space r e": "editor::Rename"
     }
   },
@@ -26,6 +35,7 @@
     "context": "GitPanel && ChangesList",
     "use_key_equivalents": true,
     "bindings": {
+      "space g g": "git_panel::Close",
       "backspace": null
     }
   }
