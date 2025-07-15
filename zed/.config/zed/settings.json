@@ -55,6 +55,9 @@
     },
     "C++": {
       "show_edit_predictions": true
+    },
+    "TypeScript": {
+      "language_servers": ["tsgo", "vtsls"]
     }
   },
   "relative_line_numbers": true,

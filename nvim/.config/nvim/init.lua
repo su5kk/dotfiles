@@ -1,1 +1,2 @@
-require("config.lazy")
+require("minvim.init")
+vim.lsp.set_log_level("off")
