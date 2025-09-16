@@ -87,42 +87,6 @@ else
     print_status "WezTerm is already installed"
 fi
 
-# Install Starship
-if ! formula_exists starship; then
-    print_status "Installing Starship prompt..."
-    brew install starship
-else
-    print_status "Starship is already installed"
-fi
-
-# Install SketchyBar
-if ! formula_exists sketchybar; then
-    print_status "Installing SketchyBar..."
-    brew tap FelixKratz/formulae
-    brew install sketchybar
-    
-    # Setup default configuration
-    print_status "Setting up SketchyBar configuration..."
-    mkdir -p ~/.config/sketchybar/plugins
-    
-    if [[ ! -f ~/.config/sketchybar/sketchybarrc ]]; then
-        cp "$(brew --prefix)/share/sketchybar/examples/sketchybarrc" ~/.config/sketchybar/sketchybarrc
-        print_status "Copied default sketchybarrc configuration"
-    else
-        print_warning "SketchyBar configuration already exists, skipping..."
-    fi
-    
-    if [[ ! -d ~/.config/sketchybar/plugins ]] || [[ -z "$(ls -A ~/.config/sketchybar/plugins)" ]]; then
-        cp -r "$(brew --prefix)/share/sketchybar/examples/plugins/"* ~/.config/sketchybar/plugins/
-        chmod +x ~/.config/sketchybar/plugins/*
-        print_status "Copied default SketchyBar plugins"
-    else
-        print_warning "SketchyBar plugins directory already exists and is not empty, skipping..."
-    fi
-else
-    print_status "SketchyBar is already installed"
-fi
-
 # Install AeroSpace
 if ! cask_exists aerospace; then
     print_status "Installing AeroSpace window manager..."

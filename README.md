@@ -27,8 +27,6 @@ stow wezterm
 stow tmux
 stow zed
 stow aerospace
-stow sketchybar
-stow starship
 ```
 
 ### Useful Commands
@@ -52,5 +50,3 @@ stow -n nvim
 - **Zed Editor** (`zed/`) - Modern text editor with Vim mode
 - **Tmux** (`tmux/`) - Terminal multiplexer with TPM plugin manager
 - **AeroSpace** (`aerospace/`) - Tiling window manager
-- **SketchyBar** (`sketchybar/`) - Custom menu bar
-- **Starship** (`starship/`) - Cross-shell prompt
