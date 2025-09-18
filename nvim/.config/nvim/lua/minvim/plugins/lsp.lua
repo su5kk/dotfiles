@@ -1,6 +1,19 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
+        -- lazydev.nvim is a plugin that properly configures LuaLS for editing your Neovim config by
+        -- lazily updating your workspace libraries.
+        {
+            'folke/lazydev.nvim',
+            ft = 'lua',
+            opts = {
+                library = {
+                    -- See the configuration section for more details
+                    -- Load luvit types when the `vim.uv` word is found
+                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                },
+            }
+        },
         "hrsh7th/cmp-nvim-lsp",
         { "mason-org/mason.nvim",           version = "^1.0.0" },
         { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
@@ -24,40 +37,78 @@ return {
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
 
-
+        local servers = {
+            gopls = { capabilities = capabilities },
+            marksman = { capabilities = capabilities },
+            rust_analyzer = { capabilities = capabilities },
+            vtsls = {
+                capabilities = capabilities,
+                settings = {
+                    complete_function_calls = true,
+                    vtsls = {
+                        enableMoveToFileCodeAction = true,
+                        autoUseWorkspaceTsdk = true,
+                        experimental = {
+                            completion = {
+                                enableServerSideFuzzyMatch = true,
+                            },
+                        },
+                    },
+                    javascript = {
+                        updateImportsOnFileMove = { enabled = "always" },
+                        suggest = {
+                            completeFunctionCalls = true,
+                        },
+                        inlayHints = {
+                            enumMemberValues = { enabled = true },
+                            functionLikeReturnTypes = { enabled = true },
+                            parameterNames = { enabled = "literals" },
+                            parameterTypes = { enabled = true },
+                            propertyDeclarationTypes = { enabled = true },
+                            variableTypes = { enabled = false },
+                        },
+                    },
+                    typescript = {
+                        updateImportsOnFileMove = { enabled = "always" },
+                        suggest = {
+                            completeFunctionCalls = true,
+                        },
+                        inlayHints = {
+                            enumMemberValues = { enabled = true },
+                            functionLikeReturnTypes = { enabled = true },
+                            parameterNames = { enabled = "literals" },
+                            parameterTypes = { enabled = true },
+                            propertyDeclarationTypes = { enabled = true },
+                            variableTypes = { enabled = false },
+                        },
+                    },
+                },
+            },
+            lua_ls = {
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        telemetry = { enable = false },
+                        -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+                        diagnostics = { disable = { 'missing-fields' } },
+                        hint = { enable = true },
+                    },
+                },
+            },
+        }
+        local ensure_installed = vim.tbl_keys(servers or {})
         require("mason").setup()
         require("mason-lspconfig").setup({
             automatic_installation = false,
-            ensure_installed = {
-                "lua_ls",
-                "rust_analyzer",
-                "gopls",
-                "vtsls",
-            },
-            handlers = {
-                function(server_name)
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
-                end,
-                ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                runtime = { version = "Lua 5.1" },
-                                diagnostics = {
-                                    globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
-                                }
-                            }
-                        }
-                    }
-                end
-            }
-
+            ensure_installed = ensure_installed,
         })
+
         local l = vim.lsp
+        for server, settings in pairs(servers) do
+            l.config(server, settings)
+            l.enable(server)
+        end
+
         l.handlers["textDocument/hover"] = function(_, result, ctx, config)
             config = config or { border = "rounded", focusable = true }
             config.focus_id = ctx.method
@@ -128,8 +179,6 @@ return {
                 vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
                 vim.keymap.set("n", "<leader>re", function() vim.lsp.buf.rename() end, opts)
                 vim.keymap.set("n", "<leader>k", function() vim.diagnostic.open_float() end, opts)
-                vim.keymap.set("n", "<leader>dn", function() vim.diagnostic.goto_next() end, opts)
-                vim.keymap.set("n", "<leader>dp", function() vim.diagnostic.goto_prev() end, opts)
             end
         })
     end
