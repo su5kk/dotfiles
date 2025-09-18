@@ -1,3 +1,4 @@
+vim.opt.winborder = "rounded"
 vim.opt.mouse = ""
 vim.opt.tabstop = 4
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor100"
@@ -16,10 +17,12 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.ignorecase = true
 vim.opt.undofile = true
+
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
+
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldtext = ""
