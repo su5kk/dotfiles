@@ -8,7 +8,7 @@ return {
                 caret_right       = '<Right>',
 
                 choose            = '<CR>',
-                choose_in_split   = '<C-s>',
+                choose_in_split   = '',
                 choose_in_tabpage = '<C-t>',
                 choose_in_vsplit  = '<C-v>',
                 choose_marked     = '<C-s>',
