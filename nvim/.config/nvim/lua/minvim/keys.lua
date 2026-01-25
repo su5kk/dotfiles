@@ -9,6 +9,7 @@ map('n', '<leader>la', vim.lsp.buf.code_action, { desc = 'List functions' })
 map('n', 'gr', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'references' })<cr>", { desc = 'List functions' })
 map('n', 'gd', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'definition' })<cr>", { desc = 'List functions' })
 map('n', 'gT', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'type_definition' })<cr>", { desc = 'List functions' })
+map('n', '<leader>fs', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'workspace_symbol_live' })<cr>", { desc = 'List functions' })
 
 map({ "n", "t" }, "<Leader>tn", "<Cmd>tabnew<CR>")
 map({ "n", "t" }, "<Leader>tx", "<Cmd>tabclose<CR>")
