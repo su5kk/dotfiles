@@ -40,6 +40,7 @@ return {
         local servers = {
             gopls = { capabilities = capabilities },
             marksman = { capabilities = capabilities },
+            jsonls = { capabilities = capabilities },
             rust_analyzer = { capabilities = capabilities },
             vtsls = {
                 capabilities = capabilities,
