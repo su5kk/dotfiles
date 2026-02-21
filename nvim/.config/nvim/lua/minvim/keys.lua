@@ -4,7 +4,7 @@ local map = vim.keymap.set
 map({ "n", "v" }, "<leader>y", '"+y')
 map({ "n", "v" }, "<leader>d", '"+d')
 map("n", "<leader>tf", ':terminal<cr>')
-map('t', '<Esc>', [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+map('t', '<leader><Esc>', [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 map('n', '<leader>la', vim.lsp.buf.code_action, { desc = 'List functions' })
 map('n', 'gr', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'references' })<cr>", { desc = 'List functions' })
 map('n', 'gd', "<cmd>lua MiniExtra.pickers.lsp({ scope = 'definition' })<cr>", { desc = 'List functions' })
@@ -32,3 +32,6 @@ end, {
   silent = true,
   desc = 'Find Async API Usages'
 })
+
+vim.keymap.set('n', ']x', '<Cmd>try | cnext | catch | cfirst | catch | endtry<CR>')
+vim.keymap.set('n', '[x', '<Cmd>try | cprevious | catch | clast | catch | endtry<CR>')
