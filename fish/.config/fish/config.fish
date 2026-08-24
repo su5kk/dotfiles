@@ -1,7 +1,5 @@
 set --export EDITOR /opt/homebrew/bin/nvim
 
-# opencode
-fish_add_path $HOME/.opencode/bin
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -10,3 +8,14 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "$HOME/.local/bin" $PATH
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Pi
+fish_add_path "$HOME/.local/share/fnm/node-versions/v24.11.1/installation/bin"
