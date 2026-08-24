@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "auth": "oauth",
+      "protocolVersion": "auto"
+    },
+    "chrome-devtools": {
+      "disabled": true,
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--no-usage-statistics"
+      ]
+    },
+    "context7": {
+      "disabled": true,
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "!/usr/bin/security find-generic-password -w -a \"$USER\" -s pi-context7-api-key"
+      }
+    },
+    "codex": {
+      "disabled": true,
+      "command": "codex",
+      "args": [
+        "-m",
+        "gpt-5.5-fast",
+        "-c",
+        "model_reasoning_effort=high",
+        "mcp-server"
+      ]
+    }
+  },
+  "settings": {
+    "toolPrefix": "short",
+    "autoAuth": true,
+    "idleTimeout": 15
+  }
+}
