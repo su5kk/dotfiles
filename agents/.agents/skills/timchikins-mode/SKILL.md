@@ -31,3 +31,6 @@ Procedure:
 After the user explicitly asked to implement:
 - `tdd` skill to begin implementation
 - `principle-prove-it-works` at all times: during tdd phases, when finishing up the implementation.
+
+#### Programming languages
+-- Go: MUST use `use-modern-go` skill
