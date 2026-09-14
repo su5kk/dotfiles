@@ -16,3 +16,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # Pi
 fish_add_path "$HOME/.local/share/fnm/node-versions/v24.11.1/installation/bin"
+
+# pyenv
+pyenv init - | source
