@@ -53,7 +53,7 @@ stow --no-folding --target="$HOME" -n nvim
 ## Applications Configured
 
 - **Neovim** (`nvim/`) - Text editor with Lazy.nvim plugin manager
-- **Fish Shell** (`fish/`) - Shell with Fisher plugin manager and Starship prompt
+- **Fish Shell** (`fish/`) - Shell with Fisher plugin manager and Pure prompt
 - **WezTerm** (`wezterm/`) - Terminal emulator
 - **Tmux** (`tmux/`) - Terminal multiplexer with TPM plugin manager
 - **AeroSpace** (`aerospace/`) - Tiling window manager

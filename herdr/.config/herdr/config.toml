@@ -8,4 +8,8 @@ shell_mode = "login"
 agent_panel_sort = "spaces"
 
 [keys]
-prefix = "ctrl+a"
+prefix = "backtick"
+previous_tab = "shift+left"
+next_tab = "shift+right"
+switch_tab = ""
+switch_workspace = "prefix+1..9"

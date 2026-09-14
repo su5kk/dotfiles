@@ -22,3 +22,11 @@ pyenv init - | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
+
+# Minimal Pure prompt.
+set --global pure_enable_single_line_prompt true
+set --global pure_enable_git true
+set --global pure_enable_virtualenv false
+set --global pure_enable_aws_profile false
+set --global pure_enable_container_detection false
+set --global pure_enable_k8s false
