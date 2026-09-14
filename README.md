@@ -28,6 +28,7 @@ stow --no-folding --target="$HOME" wezterm
 stow --no-folding --target="$HOME" tmux
 stow --no-folding --target="$HOME" aerospace
 stow --no-folding --target="$HOME" pi
+stow --no-folding --target="$HOME" agents
 stow --no-folding --target="$HOME" herdr
 ```
 
@@ -57,4 +58,5 @@ stow --no-folding --target="$HOME" -n nvim
 - **Tmux** (`tmux/`) - Terminal multiplexer with TPM plugin manager
 - **AeroSpace** (`aerospace/`) - Tiling window manager
 - **Pi** (`pi/`) - Agent harness settings and extensions
+- **Agents** (`agents/`) - Global agent skills (`~/.agents`)
 - **Herdr** (`herdr/`) - Agent workspace configuration
