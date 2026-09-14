@@ -19,3 +19,6 @@ fish_add_path "$HOME/.local/share/fnm/node-versions/v24.11.1/installation/bin"
 
 # pyenv
 pyenv init - | source
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end

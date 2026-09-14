@@ -9,7 +9,33 @@
       "skillFolderHash": "c1470a475a0472fceda2401ea6763708a91680a8",
       "installedAt": "2026-06-03T14:27:07.990Z",
       "updatedAt": "2026-06-03T14:27:07.990Z"
+    },
+    "use-modern-go": {
+      "source": "JetBrains/go-modern-guidelines",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JetBrains/go-modern-guidelines.git",
+      "skillPath": "plugin/skills/use-modern-go/SKILL.md",
+      "skillFolderHash": "fa7815e20c8ce17aa4adcec063a084c3b58feef8",
+      "installedAt": "2026-09-14T13:26:28.691Z",
+      "updatedAt": "2026-09-14T13:26:28.691Z"
     }
   },
-  "dismissed": {}
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
 }

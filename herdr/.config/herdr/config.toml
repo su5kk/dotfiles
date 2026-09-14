@@ -1,4 +1,9 @@
 onboarding = false
+
+[terminal]
+default_shell = "/usr/local/bin/fish"
+shell_mode = "login"
+
 [ui]
 agent_panel_sort = "spaces"
 

@@ -63,6 +63,20 @@ else
     print_status "Fish shell is already installed"
 fi
 
+FISH_PATH="$(command -v fish)"
+if [[ -n "$FISH_PATH" ]]; then
+    if ! grep -qx "$FISH_PATH" /etc/shells; then
+        print_status "Adding Fish to /etc/shells..."
+        echo "$FISH_PATH" | sudo tee -a /etc/shells >/dev/null
+    fi
+
+    CURRENT_SHELL="$(dscl . -read "$HOME" UserShell 2>/dev/null | awk '{print $2}')"
+    if [[ "$CURRENT_SHELL" != "$FISH_PATH" ]]; then
+        print_status "Setting Fish as the default login shell..."
+        chsh -s "$FISH_PATH"
+    fi
+fi
+
 # Install Neovim
 if ! formula_exists neovim; then
     print_status "Installing Neovim..."
@@ -100,7 +114,7 @@ print_status "All tools have been installed successfully!"
 # Print post-installation notes
 echo ""
 print_status "Post-installation notes:"
-echo "  • To use Fish as your default shell, add it to /etc/shells and run: chsh -s \$(which fish)"
+echo "  • Fish is configured as the default login shell"
 echo "  • For SketchyBar, enable 'Displays have separate Spaces' in System Settings → Desktop & Dock"
 echo "  • Initialize Starship in your shell config:"
 echo "    - Fish: Add 'starship init fish | source' to ~/.config/fish/config.fish"
