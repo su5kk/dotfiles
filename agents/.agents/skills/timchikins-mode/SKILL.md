@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 YOU MUST FOLLOW:
 - During implementation -> `ponytail` skill in full mode
-- Any prose surface → the **unslop** skill. Your reply is a prose surface.
+- Any prose surface → the `unslop` skill. Your reply is a prose surface.
 - Before commit → the `remove-ai-slop` skill
 - Before commit → the `ponytail-review` skill
 - Before review → remove any bs or unhelpful comment
@@ -19,12 +19,14 @@ YOU MUST FOLLOW:
 
 Input: user-written spec/design doc of a feature 
 Procedure:
+<DO NOT IGNORE>
+1. Infer intent:
+    - if user only asked for the implementation, proceed to the implementation phase with the recommendations.
+    - otherwise, do the prep work before starting implementation
+</DO NOT IGNORE>
+
 ### Prep work
 - `grill-with-docs` skill to clarify intent, ask questions in case user missed something
-- `blast-radius` to produce a doc on how the feature will affect the existing system
-    Guide on the blast-radius
-    - store the investigation result into the .scratch/blast-radius/ folder, lazily create if it does not exist.
-    - spawn a scout subagent for the investigation process
 - append links to files to the user spec file as an appendix at the end of the file, do not modify any other content.
 
 ### Implementation
