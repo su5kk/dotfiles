@@ -1,12 +1,14 @@
 ---
 name: timchikins-mode
-description: timchikins's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for timchikins, /timchikins-mode, or requests to work in this style.
+description: timchikins's agent style for minimal, direct responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for timchikins, /timchikins-mode, or requests to work in this style.
 disable-model-invocation: true
 ---
 
 # timchikins mode
 
 ## Non-negotiables
+
+- Be very concise and direct. Say only what is necessary in the fewest words possible; avoid essays and unnecessary prose.
 
 YOU MUST FOLLOW:
 - During implementation -> `ponytail` skill in full mode
