@@ -1,0 +1,65 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "languages": {
+        "TypeScript": {
+            "language_servers": [
+                "typescript-ls",
+                "!vtsls",
+            ],
+        },
+        "TSX": {
+            "language_servers": [
+                "typescript-ls",
+                "!vtsls",
+            ],
+        },
+    },
+    "diff_view_style": "unified",
+    "search": {
+        "button": false,
+    },
+    "terminal": {
+        "font_size": 22.0,
+    },
+    "outline_panel": {
+        "dock": "left",
+    },
+    "collaboration_panel": {
+        "button": false,
+        "dock": "left",
+    },
+    "agent": {
+        "button": false,
+        "dock": "right",
+        "favorite_models": [],
+        "model_parameters": [],
+    },
+    "git_panel": {
+        "dock": "left",
+    },
+    "vim_mode": true,
+    "vim": {
+        "use_system_clipboard": "never",
+    },
+    "ui_font_size": 22.0,
+    "buffer_font_size": 22.0,
+    "theme": "Rosé Pine",
+    "tab_size": 4,
+    "hard_tabs": false,
+    "soft_wrap": "none",
+    "relative_line_numbers": "enabled",
+    "current_line_highlight": "none",
+    "vertical_scroll_margin": 5,
+    "format_on_save": "off",
+    "project_panel": {
+        "dock": "left",
+        "hide_hidden": false,
+    },
+}

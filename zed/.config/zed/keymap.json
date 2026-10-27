@@ -1,0 +1,43 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "space y": ["workspace::SendKeystrokes", "\" + y"],
+      "space d": ["workspace::SendKeystrokes", "\" + d"],
+      "space e": "project_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f g": "workspace::NewSearch",
+      "space f b": "tab_switcher::Toggle",
+      "space f s": "project_symbols::Toggle",
+      "space l q": "diagnostics::DeployCurrentFile",
+      "space t f": "workspace::NewTerminal",
+      "space t n": "workspace::NewFile",
+      "space t x": "pane::CloseActiveItem",
+      "space 1": ["pane::ActivateItem", 0],
+      "space 2": ["pane::ActivateItem", 1],
+      "space 3": ["pane::ActivateItem", 2],
+      "space 4": ["pane::ActivateItem", 3],
+      "space 5": ["pane::ActivateItem", 4],
+      "space 6": ["pane::ActivateItem", 5],
+      "space 7": ["pane::ActivateItem", 6],
+      "space 8": ["pane::ActivateItem", 7],
+      "space l a": "editor::ToggleCodeActions",
+      "space c a": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      "space r e": "editor::Rename",
+      "space k": "editor::GoToDiagnostic",
+      "g r": "editor::FindAllReferences",
+      "g d": "editor::GoToDefinition",
+      "g shift-t": "editor::GoToTypeDefinition",
+      "g i": "editor::GoToImplementation",
+      "shift-k": "editor::Hover",
+      "] x": "editor::GoToDiagnostic",
+      "[ x": "editor::GoToPreviousDiagnostic"
+    }
+  }
+]

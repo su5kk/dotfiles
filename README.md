@@ -23,6 +23,7 @@ stow --no-folding --target="$HOME" */
 
 # Or install specific applications
 stow --no-folding --target="$HOME" nvim
+stow --no-folding --target="$HOME" zed
 stow --no-folding --target="$HOME" fish
 stow --no-folding --target="$HOME" wezterm
 stow --no-folding --target="$HOME" tmux
@@ -34,6 +35,7 @@ stow --no-folding --target="$HOME" herdr
 
 If a destination file already exists, back it up or remove it before running Stow.
 Fish state and private functions are not managed here.
+Zed backups, temporary files, conversations, embeddings, and prompt databases remain local.
 Pi credentials and session data, plus Herdr sessions, logs, and sockets, remain local.
 The Context7 MCP entry reads `pi-context7-api-key` from the current user's macOS Keychain.
 
@@ -53,6 +55,7 @@ stow --no-folding --target="$HOME" -n nvim
 ## Applications Configured
 
 - **Neovim** (`nvim/`) - Text editor with Lazy.nvim plugin manager
+- **Zed** (`zed/`) - Editor settings, keymap, and custom Rosé Pine theme
 - **Fish Shell** (`fish/`) - Shell with Fisher plugin manager and Pure prompt
 - **WezTerm** (`wezterm/`) - Terminal emulator
 - **Tmux** (`tmux/`) - Terminal multiplexer with TPM plugin manager
