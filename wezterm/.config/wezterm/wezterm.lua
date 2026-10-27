@@ -22,6 +22,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.95
 config.keys = {
+    { key = "Enter", mods = "SHIFT", action = wezterm.action { SendString = "\x1b\r" } },
     -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
     { key = "LeftArrow",  mods = "OPT", action = wezterm.action { SendString = "\x1bb" } },
     -- Make Option-Right equivalent to Alt-f; forward-word
