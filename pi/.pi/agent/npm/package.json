@@ -2,9 +2,9 @@
   "name": "pi-extensions",
   "private": true,
   "dependencies": {
-    "pi-claude-bridge": "^0.9.3",
-    "pi-cursor-sdk": "^0.5.4",
+    "pi-claude-bridge": "^0.13.0",
+    "pi-cursor-sdk": "^0.5.42",
     "pi-custom-providers": "^0.4.3",
-    "pi-mcp-adapter": "^7.0.0"
+    "pi-mcp-adapter": "^7.0.1"
   }
 }

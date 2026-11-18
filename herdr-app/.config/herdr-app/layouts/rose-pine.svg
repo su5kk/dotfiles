@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" rx="10" fill="#191724" fill-opacity=".85"/>
+  <path d="M10 0H112V300H10Q0 300 0 290V10Q0 0 10 0Z" fill="#1f1d2e" fill-opacity=".85"/>
+  <g fill="#e0def4" font-family="JetBrainsMono Nerd Font,monospace" font-size="10">
+    <text x="12" y="30">Rosé Pine</text>
+    <text x="12" y="68">Spaces</text>
+    <text x="12" y="185">Agents</text>
+  </g>
+  <g fill="#26233a">
+    <rect x="10" y="80" width="90" height="22" rx="5"/>
+    <rect x="122" y="10" width="108" height="24" rx="6"/>
+  </g>
+  <rect x="122" y="44" width="348" height="232" rx="8" fill="#191724" fill-opacity=".85" stroke="#c4a7e7"/>
+  <g font-family="JetBrainsMono Nerd Font,monospace" font-size="10">
+    <text x="132" y="26" fill="#e0def4">Terminal</text>
+    <text x="136" y="66" fill="#908caa">JetBrainsMono Nerd Font</text>
+    <text x="136" y="100" fill="#9ccfd8">❯</text>
+    <text x="152" y="100" fill="#e0def4">85% opacity</text>
+  </g>
+  <path d="M123 76H469M112 286H480" stroke="#403d52"/>
+  <g fill="#c4a7e7">
+    <rect x="136" y="124" width="150" height="3" rx="1.5"/>
+    <rect x="136" y="138" width="112" height="3" rx="1.5" fill="#ebbcba"/>
+    <rect x="136" y="152" width="130" height="3" rx="1.5" fill="#9ccfd8"/>
+  </g>
+</svg>

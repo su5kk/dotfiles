@@ -1,0 +1,17 @@
+{
+  "zoom": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "font_ligatures": false,
+  "terminal_line_height": 1,
+  "terminal_cell_width": 1,
+  "terminal_scroll_speed": 1,
+  "minimum_contrast": 1,
+  "appearance": "dark",
+  "theme": "rose-pine",
+  "font": "JetBrainsMono Nerd Font",
+  "font_size": 19.666667,
+  "font_weight": 400,
+  "ui_font": "JetBrainsMono Nerd Font"
+}

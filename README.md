@@ -31,12 +31,16 @@ stow --no-folding --target="$HOME" aerospace
 stow --no-folding --target="$HOME" pi
 stow --no-folding --target="$HOME" agents
 stow --no-folding --target="$HOME" herdr
+stow --no-folding --target="$HOME" herdr-app
 ```
 
 If a destination file already exists, back it up or remove it before running Stow.
 Fish state and private functions are not managed here.
 Zed backups, temporary files, conversations, embeddings, and prompt databases remain local.
 Pi credentials and session data, plus Herdr sessions, logs, and sockets, remain local.
+Herdr desktop settings, keys, layouts and their state, themes, mods, UI assets, and shared preferences are preserved.
+Desktop history, mod runtime data, telemetry, backups, and update caches remain local.
+Review future `shared.json` changes before committing; mods can store arbitrary data there.
 The Context7 MCP entry reads `pi-context7-api-key` from the current user's macOS Keychain.
 
 ### Useful Commands
@@ -63,3 +67,4 @@ stow --no-folding --target="$HOME" -n nvim
 - **Pi** (`pi/`) - Agent harness settings and extensions
 - **Agents** (`agents/`) - Global agent skills (`~/.agents`)
 - **Herdr** (`herdr/`) - Agent workspace configuration
+- **Herdr desktop** (`herdr-app/`) - Desktop settings, keybindings, layouts, themes, and mods

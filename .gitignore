@@ -1,1 +1,16 @@
 fish/.config/fish/fish_variables
+
+# Herdr desktop runtime data and private history.
+herdr-app/.config/herdr-app/data/
+herdr-app/.config/herdr-app/telemetry/
+herdr-app/.config/herdr-app/*backup.*/
+herdr-app/.config/herdr-app/view.json
+herdr-app/.config/herdr-app/windows.json
+herdr-app/.config/herdr-app/update-notes*
+herdr-app/.config/herdr-app/*.sock
+herdr-app/.config/herdr-app/*.log*
+herdr-app/.config/herdr-app/*.error
+herdr-app/.config/herdr-app/*.corrupt-*
+herdr-app/.config/herdr-app/*.reset-*
+herdr-app/.config/herdr-app/**/node_modules/
+herdr-app/.config/herdr-app/**/.DS_Store
