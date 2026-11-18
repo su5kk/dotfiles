@@ -21,6 +21,13 @@
             ],
         },
     },
+    "lsp": {
+        "gopls": {
+            "binary": {
+                "path": "/Users/timtursunov/go/bin/gopls",
+            },
+        },
+    },
     "diff_view_style": "unified",
     "search": {
         "button": false,

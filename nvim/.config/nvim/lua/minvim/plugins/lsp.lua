@@ -38,7 +38,9 @@ return {
             cmp_lsp.default_capabilities())
 
         local servers = {
-            gopls = { capabilities = capabilities },
+            -- Mason's gopls keeps the Go it was built with and misreads newer syntax (new(expr), Go 1.26);
+            -- `go install golang.org/x/tools/gopls@latest` rebuilds this one with the current Go
+            gopls = { capabilities = capabilities, cmd = { vim.fn.expand("~/go/bin/gopls") } },
             pyright = { capabilities = capabilities },
             marksman = { capabilities = capabilities },
             jsonls = { capabilities = capabilities },
