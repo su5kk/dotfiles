@@ -1,11 +1,11 @@
 {
   "agents": {
-    "main.js": "44dae8af5090bc74",
+    "main.js": "1cf79c0c5f578fcd",
     "mod.json": "c1d087260ba7b076"
   },
   "changes": {
     "changes.svg": "8a5b4c45adcb0ef1",
-    "main.js": "10c3b0792f63b814",
+    "main.js": "9e8641b43ed1a08b",
     "mod.json": "433fbf9dfa3e359a"
   },
   "confirm": {
@@ -17,7 +17,7 @@
     "chevron-right.svg": "7867764fc431794c",
     "file.svg": "316c5ba4beaebfe1",
     "folder.svg": "64e7b5165472b129",
-    "main.js": "95e3448d12d57c8c",
+    "main.js": "2bdffad7d8a01f8b",
     "mod.json": "433fbf9dfa3e359a"
   },
   "help": {
@@ -38,7 +38,7 @@
     "mod.json": "20fc0fe012d028a0"
   },
   "menu": {
-    "main.js": "8b5fe9d0ffa3be3a",
+    "main.js": "54b66f522e6e075f",
     "mod.json": "433fbf9dfa3e359a"
   },
   "new-menu": {
@@ -47,7 +47,7 @@
   },
   "pane": {
     "close.svg": "a5b3c4e8f1b96e70",
-    "main.js": "0baad3eb9f8b8df1",
+    "main.js": "319ae828b1629cd2",
     "mod.json": "100e8915b26fb6b1",
     "split-down.svg": "5fb017357dcb7d15",
     "split-right.svg": "3f66f78fb7e964b4",
@@ -55,7 +55,7 @@
     "zoom.svg": "4b2c0cf1547241c1"
   },
   "peek": {
-    "main.js": "f1b1155f238acbd0",
+    "main.js": "a28e16789a3fe87e",
     "mod.json": "4f60f6ff15f11c9b"
   },
   "picker": {
@@ -67,7 +67,7 @@
     "mod.json": "433fbf9dfa3e359a"
   },
   "spaces": {
-    "main.js": "bbcc823778bd7475",
+    "main.js": "aa75ee3128eef9b9",
     "mod.json": "4a42ed2202338077"
   },
   "tabs": {
@@ -94,7 +94,7 @@
     "mod.json": "d8c5e5fe692faad8"
   },
   "toast": {
-    "main.js": "c2563eb708ecb359",
+    "main.js": "170541ea3a0600b4",
     "mod.json": "433fbf9dfa3e359a"
   },
   "win98": {
@@ -360,8 +360,9 @@
     "minus.svg": "9f34bc47ac7d5194",
     "mod.json": "433fbf9dfa3e359a",
     "monitor.svg": "dfa84aaf3437b005",
+    "panel-bottom.svg": "06654105db59829d",
     "panel-left.svg": "4ac40d4f8fb48066",
-    "panel-right.svg": "58f39adf86d954d9",
+    "panel-right.svg": "d152a257d0b43bfc",
     "pin-off.svg": "7a8c130e50675238",
     "pin.svg": "164319cfd4d68176",
     "plus.svg": "780626bfae0a5bdd",
@@ -376,11 +377,11 @@
     "x.svg": "b371ad85aff6b5ff"
   },
   "workspace-status": {
-    "main.js": "fd4655b33806d999",
+    "main.js": "a1db108171cdb9d7",
     "mod.json": "433fbf9dfa3e359a"
   },
   "worktree": {
-    "main.js": "0e8c1447f4a1dc22",
+    "main.js": "59cfc4e41224f44c",
     "mod.json": "433fbf9dfa3e359a"
   }
 }

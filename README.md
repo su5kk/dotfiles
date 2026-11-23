@@ -19,7 +19,8 @@ cd ~/dotfiles
 
 # Install all configurations
 # --no-folding keeps runtime files out of stateful config directories
-stow --no-folding --target="$HOME" */
+stow --no-folding --ignore=nvim-links --target="$HOME" */
+ln -s "$PWD/herdr-app/.config/herdr-app/mods/nvim-links" "$HOME/.config/herdr-app/mods/nvim-links"
 
 # Or install specific applications
 stow --no-folding --target="$HOME" nvim
@@ -31,7 +32,8 @@ stow --no-folding --target="$HOME" aerospace
 stow --no-folding --target="$HOME" pi
 stow --no-folding --target="$HOME" agents
 stow --no-folding --target="$HOME" herdr
-stow --no-folding --target="$HOME" herdr-app
+stow --no-folding --ignore=nvim-links --target="$HOME" herdr-app
+ln -s "$PWD/herdr-app/.config/herdr-app/mods/nvim-links" "$HOME/.config/herdr-app/mods/nvim-links"
 ```
 
 If a destination file already exists, back it up or remove it before running Stow.
@@ -42,6 +44,14 @@ Herdr desktop settings, keys, layouts and their state, themes, mods, UI assets, 
 Desktop history, mod runtime data, telemetry, backups, and update caches remain local.
 Review future `shared.json` changes before committing; mods can store arbitrary data there.
 The Context7 MCP entry reads `pi-context7-api-key` from the current user's macOS Keychain.
+
+### Herdr file clicks
+
+In the Rose Pine layout, Cmd-click a detected local path such as `./src/file.rs:42:7` to open it in Neovim in the same space. The current tab's editor wins; otherwise the first editor in that space is used. If none exists, a Neovim tab opens. URLs and remote paths keep their normal behavior.
+
+Neovim registers its RPC socket with Herdr on startup. For an editor that was already open when this config changed, run `:lua require("minvim.herdr")` once. Modified buffers stay loaded when a click opens another file.
+
+Keep `mods/nvim-links` linked as a whole directory. Herdr rejects a `link.js` symlink pointing outside its mod directory. Use `--ignore=nvim-links` when restowing Herdr so Stow leaves that directory link intact.
 
 ### Useful Commands
 

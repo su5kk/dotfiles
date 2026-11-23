@@ -15,6 +15,8 @@ export default class SpacePrefix extends View {
       closeOverlay(props().overlay);
       run("space.select", { index: Number(command) });
       return;
+    } else if (command === "sidebar") {
+      run("layout.toggle", { id: "sidebar" });
     } else if (command === "literal") {
       if (this.terminal) {
         const result = await hc(["keys", this.terminal, "`"]);
@@ -30,6 +32,6 @@ export default class SpacePrefix extends View {
     const t = theme();
     return div().id("space-prefix").track_focus(this.handle)
       .size_full().p(16).bg(t.popover).text_color(t.foreground).text_size(13)
-      .child("1-9: space    `: type backtick    Esc: cancel");
+      .child("1-9: space   b: sidebar   `: literal   Esc: cancel");
   }
 }

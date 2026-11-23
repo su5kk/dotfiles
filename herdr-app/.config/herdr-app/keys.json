@@ -64,6 +64,7 @@
   },
   "mod:space-prefix": {
     "`": "space-prefix.literal",
+    "b": "space-prefix.sidebar",
     "1": "space-prefix.1",
     "2": "space-prefix.2",
     "3": "space-prefix.3",
