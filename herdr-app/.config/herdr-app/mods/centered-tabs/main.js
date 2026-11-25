@@ -161,7 +161,7 @@ export default class Tabs extends View {
         .child(svg("mods/terminals-bar/stack.svg").size(15))
         .child(div().max_w(160).truncate().text_color(t.foreground).child(space?.name ?? "Spaces")))
       .child(h_flex().flex_1().min_w(0).h_full().items_center().justify_center()
-        .child(h_flex().id("tab-scroll").w(shown.length * tabWidth + Math.max(0, shown.length - 1) * 3 + 6).flex_shrink(1).min_w(0).h(36).p(3).gap(3).rounded(16).items_center().bg(t.popover).overflow_x_scrollbar().track_scroll(this.scroll)
+        .child(h_flex().id("tab-scroll").w(shown.length * tabWidth + Math.max(0, shown.length - 1) * 3 + 6).flex_shrink(1).min_w(0).h(36).p(3).gap(3).rounded(16).items_center().bg(t.chrome).overflow_x_scrollbar().track_scroll(this.scroll)
           .on_size_change((_size, cx) => { if (active >= 0) { this.scroll.scroll_to_item(active); cx.notify(); } })
           .children(shown.map(item))))
       .child(button("tab-commands", svg("mods/terminals-bar/command.svg").size(17), () => run("app.palette")))
