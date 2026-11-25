@@ -5,7 +5,7 @@
   },
   "changes": {
     "changes.svg": "8a5b4c45adcb0ef1",
-    "main.js": "9e8641b43ed1a08b",
+    "main.js": "c5787c31283d4146",
     "mod.json": "433fbf9dfa3e359a"
   },
   "confirm": {
@@ -17,7 +17,7 @@
     "chevron-right.svg": "7867764fc431794c",
     "file.svg": "316c5ba4beaebfe1",
     "folder.svg": "64e7b5165472b129",
-    "main.js": "2bdffad7d8a01f8b",
+    "main.js": "8e4488e3fac5776c",
     "mod.json": "433fbf9dfa3e359a"
   },
   "help": {
@@ -59,7 +59,7 @@
     "mod.json": "4f60f6ff15f11c9b"
   },
   "picker": {
-    "main.js": "926f800a7c1ee141",
+    "main.js": "a8e545ed36e7acc2",
     "mod.json": "e83a267b6fca8488"
   },
   "prompt": {
@@ -67,7 +67,7 @@
     "mod.json": "433fbf9dfa3e359a"
   },
   "spaces": {
-    "main.js": "aa75ee3128eef9b9",
+    "main.js": "8067902d05d475e4",
     "mod.json": "4a42ed2202338077"
   },
   "tabs": {
@@ -381,7 +381,7 @@
     "mod.json": "433fbf9dfa3e359a"
   },
   "worktree": {
-    "main.js": "59cfc4e41224f44c",
+    "main.js": "8f5526695b266476",
     "mod.json": "433fbf9dfa3e359a"
   }
 }
